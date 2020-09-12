@@ -1,0 +1,44 @@
+commonMyDB1: &commonMyDB1
+  driverName: mysql
+  username: ${MYSQL_USERNAME}
+  password: ${MYSQL_PASSWORD}
+  options: charset=utf8&parseTime=True&loc=Local
+
+commonMyDB2: &commonMyDB2
+  driverName: postgres
+  username: ${POSTGRES_USERNAME}
+  password: ${POSTGRES_PASSWORD}
+  sslMode: disable
+
+mydb1:
+  local:
+    <<: *commonMyDB1
+    address: 127.0.0.1:3306
+    rootUsername: root
+    rootPassword: pass
+  develop:
+    <<: *commonMyDB1
+    address: 192.168.1.1:3306
+    rootUsername: ${MYSQL_ROOT_USERNAME}
+    rootPassword: ${MYSQL_ROOT_PASSWORD}
+  production:
+    <<: *commonMyDB1
+    address: 192.168.1.2:3306
+
+mydb2:
+  local:
+    <<: *commonMyDB2
+    address: 127.0.0.1
+    port: 5432
+    rootUsername: user
+    rootPassword: pass
+  develop:
+    <<: *commonMyDB2
+    address: 192.168.1.3
+    port: 5432
+    rootUsername: ${POSTGRES_ROOT_USERNAME}
+    rootPassword: ${POSTGRES_ROOT_PASSWORD}
+  production:
+    <<: *commonMyDB2
+    address: 192.168.1.4
+    port: 5432

@@ -1,0 +1,7 @@
+-- [+] forward |
+
+INSERT INTO user_log VALUES (1, ${MST_USER_LOG_GENDER}, '2000-01-01 00:00:00');
+
+-- [-] rollback |
+
+DELETE FROM user_log WHERE id in (1);

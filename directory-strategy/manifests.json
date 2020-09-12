@@ -1,0 +1,114 @@
+{
+  "baseUrl": "https://raw.githubusercontent.com/poc-test-user/poc/master/directory-strategy/",
+  "defaultStrategy": "thin",
+  "strategies": {
+    "huge": {
+      "defaultDirName": "my-huge-meerkat",
+      "directoryPaths": [
+        "huge",
+        "huge/mydb1",
+        "huge/mydb1/develop",
+        "huge/mydb1/local",
+        "huge/mydb1/production",
+        "huge/schema",
+        "huge/mydb2",
+        "huge/mydb2/develop",
+        "huge/mydb2/local",
+        "huge/mydb2/production"
+      ],
+      "filePaths": [
+        "huge/mydb1/20210101-100000_create-user-table.sql",
+        "huge/mydb1/develop/.gitkeep",
+        "huge/mydb1/local/.gitkeep",
+        "huge/mydb1/local/20210101-120000_insert-dummy-data-user-table.sql",
+        "huge/mydb1/production/.gitkeep",
+        "huge/mydb1/20210101-110000_insert-mst-data-user-table.sql.meer",
+        "huge/README.md",
+        "huge/schema/mydb1.sql",
+        "huge/schema/mydb2.sql",
+        "huge/.gitignore",
+        "huge/.env.example",
+        "huge/mydb2/develop/.gitkeep",
+        "huge/mydb2/20210101-110000_insert-mst-data-user-log-table.sql.meer",
+        "huge/mydb2/local/.gitkeep",
+        "huge/mydb2/production/.gitkeep",
+        "huge/mydb2/20210101-100000_create-user-log-table.sql",
+        "huge/docker-compose.yml",
+        "huge/meerkat.yaml.meer"
+      ]
+    },
+    "standard": {
+      "defaultDirName": "my-standard-meerkat",
+      "directoryPaths": [
+        "standard",
+        "standard/mydb1",
+        "standard/schema",
+        "standard/mydb2"
+      ],
+      "filePaths": [
+        "standard/mydb1/20210101-100000_create-user-table.sql",
+        "standard/README.md",
+        "standard/schema/mydb1.sql",
+        "standard/schema/mydb2.sql",
+        "standard/.gitignore",
+        "standard/.env.example",
+        "standard/mydb2/20210101-100000_create-user-log-table.sql",
+        "standard/docker-compose.yml",
+        "standard/meerkat.yaml.meer"
+      ]
+    },
+    "simple": {
+      "defaultDirName": "my-simple-meerkat",
+      "directoryPaths": [
+        "simple",
+        "simple/sql",
+        "simple/sql/develop",
+        "simple/sql/local",
+        "simple/sql/production"
+      ],
+      "filePaths": [
+        "simple/README.md",
+        "simple/.gitignore",
+        "simple/.env.example",
+        "simple/docker-compose.yml",
+        "simple/meerkat.yaml.meer",
+        "simple/sql/develop/.gitkeep",
+        "simple/sql/20210101-100000_create-example-schema.sql",
+        "simple/sql/local/.gitkeep",
+        "simple/sql/local/20210101-120000_insert-dummy-data-user-table.sql",
+        "simple/sql/production/.gitkeep",
+        "simple/sql/20210101-110000_create-user-table.sql"
+      ]
+    },
+    "thin": {
+      "defaultDirName": "my-thin-meerkat",
+      "directoryPaths": [
+        "thin",
+        "thin/sql"
+      ],
+      "filePaths": [
+        "thin/README.md",
+        "thin/.gitignore",
+        "thin/.env.example",
+        "thin/docker-compose.yml",
+        "thin/meerkat.yaml.meer",
+        "thin/sql/20210101-100000_create-example-schema.sql",
+        "thin/sql/20210101-110000_create-user-table.sql"
+      ]
+    },
+    "individual": {
+      "defaultDirName": "my-individual-meerkat",
+      "directoryPaths": [
+        "individual",
+        "individual/sql"
+      ],
+      "filePaths": [
+        "individual/README.md",
+        "individual/meerkat.yaml",
+        "individual/docker-compose.yml",
+        "individual/sql/20210101-100000_create-example-schema.sql",
+        "individual/sql/20210101-110000_create-user-table.sql"
+      ]
+    }
+  }
+}
